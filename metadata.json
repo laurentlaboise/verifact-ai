@@ -1,0 +1,7 @@
+{
+  "name": "VeriFact AI",
+  "description": "A high-precision factual verification system that routes article claims through six specialized AI agents to ensure accuracy, context, and proper attribution before publication.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
