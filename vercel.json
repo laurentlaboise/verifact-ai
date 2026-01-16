@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_GEMINI_API_KEY": "@gemini_api_key",
+    "VITE_API_URL": "@api_url",
+    "VITE_STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key"
+  }
+}
